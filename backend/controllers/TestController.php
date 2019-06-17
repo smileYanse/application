@@ -1,19 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2019/5/9 0009
- * Time: 15:59
- */
 
 namespace backend\controllers;
 
-use common\models\Message;
-use yii\web\controller;
+use Yii;
+use yii\rest\ActiveController;
 
-class TestController extends Controller
+/**
+ * TestController implements the CRUD actions for YtAdminUser model.
+ */
+class TestController extends CommonController
 {
-    public function actionIndex(){
-        return Message::jsonReturn(1,'success');
-    }
+    public $modelClass='common\models\YtAdminUser';
 }
